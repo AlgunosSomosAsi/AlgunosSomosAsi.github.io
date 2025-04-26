@@ -19,13 +19,18 @@
     <!-- Header -->
     <header class="header-fondo">
         <div class="container">
-            <h1>Miguel Ángel López Di Benedetto</h1>
-            <p class="subtitle">Electrónica digital, analógica e IoT.</p>
-            <p class="subtitle">¿Tenés una idea? Escribime y te ayudo a concretarla:
+            <h1 id="nombre">Miguel Ángel López Di Benedetto</h1>
+            <p class="subtitle" id="subtitulo">Electrónica digital, analógica e IoT.</p>
+            <p class="subtitle">
+                <span id="contacto-texto">¿Tenés una idea? Escribime y te ayudo a concretarla:</span>
                 <a href="mailto:lopezmiguelangel@live.com" aria-label="Enviar correo a Miguel Ángel">
                     <i class="fas fa-envelope"></i>
                 </a>
             </p>
+            <div class="language-switch">
+                <button onclick="setLanguage('es')">Español</button>
+                <button onclick="setLanguage('en')">English</button>
+            </div>
         </div>
     </header>
 
@@ -34,15 +39,14 @@
         <iframe loading="lazy" width="100%" height="400" src="https://www.youtube.com/embed/Jz7AR-JNFKg"
             title="Video de Presentación" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+            allowfullscreen></iframe>
     </div>
 
     <main class="container">
         <!-- Sección: ¿Quién soy? -->
         <section class="section">
-            <h2><i class="fas fa-user"></i> ¿Quién soy?</h2>
-            <div class="card">
+            <h2><i class="fas fa-user"></i> <span id="quien-soy">¿Quién soy?</span></h2>
+            <div class="card" id="quien-soy-texto">
                 <p>Estudiante avanzado de Ingeniería de Sonido (UNTREF) con gran interés en electrónica digital y
                     analógica.
                     Actualmente, formo parte del Grupo de Acústica Submarina (GIAS), donde desarrollo el firmware de un
@@ -66,25 +70,27 @@
 
         <!-- Sección: ¿Qué hago? -->
         <section class="section">
-            <h2><i class="fas fa-code-branch"></i> ¿Qué hago?</h2>
+            <h2><i class="fas fa-code-branch"></i> <span id="que-hago">¿Qué hago?</span></h2>
+
             <div class="card">
                 <h3>ESP32 Audio Recorder</h3>
-                <p>Sistema de grabación de audio (16 bits @ 44.1 kHz) con almacenamiento en tarjeta SD y control vía
-                    WiFi mediante calendario programable.</p>
+                <p id="audio-recorder-text">Sistema de grabación de audio (16 bits @ 44.1 kHz) con almacenamiento en
+                    tarjeta SD y control vía WiFi mediante calendario programable.</p>
                 <a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank"
                     rel="noopener noreferrer">Ver en GitHub</a>
             </div>
 
             <div class="card">
                 <h3>ESP32 S3 Audio Recorder</h3>
-                <p>Versión optimizada en hardware y software, con mejoras en eficiencia energética.</p>
+                <p id="audio-recorder-s3-text">Versión optimizada en hardware y software, con mejoras en eficiencia
+                    energética.</p>
                 <a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank"
                     rel="noopener noreferrer">Ver en GitHub</a>
             </div>
 
             <div class="card">
-                <h3>Desarrollo de un Milivoltímetro</h3>
-                <p>Diseño basado en el libro <em>The Art of Electronics</em>.</p>
+                <h3 id="milivoltimetro-title">Desarrollo de un Milivoltímetro</h3>
+                <p id="milivoltimetro-text">Diseño basado en el libro <em>The Art of Electronics</em>.</p>
 
                 <div class="carousel">
                     <button class="carousel-btn prev" aria-label="Imagen anterior">&#10094;</button>
@@ -100,11 +106,11 @@
             </div>
 
             <div class="card">
-                <h3>Documentación de trabajos realizados</h3>
+                <h3 id="documentacion-title">Documentación de trabajos realizados</h3>
                 <ul class="doc-list">
                     <li>
                         <details>
-                            <summary>COMPARACIÓN RSCHI VS MMF</summary>
+                            <summary>Comparación RSCHI vs MMF</summary>
                             <div class="pdf-container">
                                 <iframe src="pdf/Informe 9 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%"
                                     height="600" title="Informe técnico 9"></iframe>
@@ -113,7 +119,7 @@
                     </li>
                     <li>
                         <details>
-                            <summary>RIRS PROCESSING SOFTWARE DEVELOPMENT</summary>
+                            <summary>RIRs Processing Software Development</summary>
                             <div class="pdf-container">
                                 <iframe src="pdf/TP 10 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%" height="600"
                                     title="Trabajo práctico 10"></iframe>
@@ -122,57 +128,119 @@
                     </li>
                 </ul>
             </div>
+        </section>
 
-            <section class="section">
-                <h2><i class="fas fa-cogs"></i> Currículum Vitae</h2>
+        <!-- Sección: Currículum Vitae -->
+        <section class="section">
+            <h2><i class="fas fa-cogs"></i> Currículum Vitae</h2>
 
-                <div class="card">
-                    <ul class="doc-list">
-                        <li>
-                            <details>
-                                <summary>Ver CV</summary>
-                                <div class="pdf-container">
-                                    <iframe src="pdf/Lopez_Di_Benedetto_CV_V2.pdf" width="100%" height="600"
-                                        title="Currículum de Miguel Ángel López Di Benedetto">
-                                    </iframe>
-                                </div>
-                            </details>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+            <div class="card">
+                <ul class="doc-list">
+                    <li>
+                        <details>
+                            <summary id="ver-cv-summary">Ver CV</summary>
+                            <div class="pdf-container">
+                                <iframe src="pdf/Lopez_Di_Benedetto_CV_V2.pdf" width="100%" height="600"
+                                    title="Currículum de Miguel Ángel López Di Benedetto"></iframe>
+                            </div>
+                        </details>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-            <!-- Footer -->
-            <footer class="footer">
-                <p>Contacto: <a href="mailto:lopezmiguelangel@live.com">lopezmiguelangel@live.com</a></p>
-                <p>Año de creación: 2025</p>
-            </footer>
-    </main>
 
-    <script>
-        const prevBtn = document.querySelector('.carousel-btn.prev');
-        const nextBtn = document.querySelector('.carousel-btn.next');
-        const carouselImages = document.querySelector('.carousel-images');
-        let currentIndex = 0;
+        <!-- Footer -->
+        <footer class="footer">
+            <p id="contacto-footer">Contacto: <a href="mailto:lopezmiguelangel@live.com">lopezmiguelangel@live.com</a>
+            </p>
+            <p id="anio-footer">Año de creación: 2025</p>
+        </footer>
 
-        const images = document.querySelectorAll('.carousel-images img');
-        const totalImages = images.length;
+        <!-- JavaScript -->
+        <script>
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+            const carouselImages = document.querySelector('.carousel-images');
+            let currentIndex = 0;
 
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
-            updateCarousel();
-        });
+            const images = document.querySelectorAll('.carousel-images img');
+            const totalImages = images.length;
 
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
-            updateCarousel();
-        });
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalImages - 1;
+                updateCarousel();
+            });
 
-        function updateCarousel() {
-            const offset = -currentIndex * 100;
-            carouselImages.style.transform = `translateX(${offset}%)`;
-        }
-    </script>
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex < totalImages - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+
+            function updateCarousel() {
+                const offset = -currentIndex * 100;
+                carouselImages.style.transform = `translateX(${offset}%)`;
+            }
+
+            function setLanguage(lang) {
+                if (lang === 'es') {
+                    document.getElementById('subtitulo').textContent = 'Electrónica digital, analógica e IoT.';
+                    document.getElementById('contacto-texto').textContent = '¿Tenés una idea? Escribime y te ayudo a concretarla:';
+                    document.getElementById('quien-soy').textContent = '¿Quién soy?';
+                    document.getElementById('que-hago').textContent = '¿Qué hago?';
+                    document.getElementById('audio-recorder-text').textContent = 'Sistema de grabación de audio (16 bits @ 44.1 kHz) con almacenamiento en tarjeta SD y control vía WiFi mediante calendario programable.';
+                    document.getElementById('audio-recorder-s3-text').textContent = 'Versión optimizada en hardware y software, con mejoras en eficiencia energética.';
+                    document.getElementById('milivoltimetro-title').textContent = 'Desarrollo de un Milivoltímetro';
+                    document.getElementById('milivoltimetro-text').textContent = 'Diseño basado en el libro The Art of Electronics.';
+                    document.getElementById('documentacion-title').textContent = 'Documentación de trabajos realizados';
+                    document.getElementById('contacto-footer').innerHTML = 'Contacto: <a href="mailto:lopezmiguelangel@live.com">lopezmiguelangel@live.com</a>';
+                    document.getElementById('anio-footer').textContent = 'Año de creación: 2025';
+
+                    // Traducción de la sección "¿Quién soy?"
+                    document.getElementById('quien-soy-texto').innerHTML = `Estudiante avanzado de Ingeniería de Sonido (UNTREF) con gran interés en electrónica digital y analógica.
+        Actualmente, formo parte del Grupo de Acústica Submarina (GIAS), donde desarrollo el firmware de un hidrófono.
+        <ul>
+            <li><a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank" rel="noopener noreferrer">ESP32_Audio_Recorder</a></li>
+            <li><a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank" rel="noopener noreferrer">ESP32_S3_Audio_Recorder</a></li>
+        </ul>
+        Además, desarrollo una nueva versión del producto <a href="https://www.noisen.com.ar/" target="_blank" rel="noopener noreferrer">Noisen</a> 
+        (<a href="https://www.researchgate.net/publication/376406175_Noisen_Un_Dispositivo_IoT_para_la_Medicion_Precisa_y_Visualizacion_de_Contaminacion_Acustica_en_Ambientes_Medicos_Criticos" target="_blank" rel="noopener noreferrer">Paper presentación</a>) 
+        en los laboratorios de la Universidad de la Defensa Nacional (UNDEF).
+        En 2025, inicié la Tecnicatura Superior en Sistemas Embebidos e Internet de las Cosas (ITFS 14).`;
+
+                    // Traducción de "Ver CV"
+                    document.getElementById('ver-cv-summary').textContent = 'Ver CV';
+                } else if (lang === 'en') {
+                    document.getElementById('subtitulo').textContent = 'Digital, analog and IoT electronics.';
+                    document.getElementById('contacto-texto').textContent = 'Got an idea? Write to me and I\'ll help you make it happen:';
+                    document.getElementById('quien-soy').textContent = 'Who am I?';
+                    document.getElementById('que-hago').textContent = 'What do I do?';
+                    document.getElementById('audio-recorder-text').textContent = 'Audio recording system (16 bits @ 44.1 kHz) with SD card storage and WiFi control via programmable calendar.';
+                    document.getElementById('audio-recorder-s3-text').textContent = 'Optimized hardware and software version with improvements in energy efficiency.';
+                    document.getElementById('milivoltimetro-title').textContent = 'Milivoltimeter Development';
+                    document.getElementById('milivoltimetro-text').textContent = 'Design based on the book The Art of Electronics.';
+                    document.getElementById('documentacion-title').textContent = 'Documentation of completed projects';
+                    document.getElementById('contacto-footer').innerHTML = 'Contact: <a href="mailto:lopezmiguelangel@live.com">lopezmiguelangel@live.com</a>';
+                    document.getElementById('anio-footer').textContent = 'Year created: 2025';
+
+                    // Traducción de la sección "Who am I?"
+                    document.getElementById('quien-soy-texto').innerHTML = `Advanced Sound Engineering student (UNTREF) with a great interest in digital and analog electronics.
+        Currently, I am part of the Underwater Acoustics Group (GIAS), where I develop the firmware for a hydrophone.
+        <ul>
+            <li><a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank" rel="noopener noreferrer">ESP32_Audio_Recorder</a></li>
+            <li><a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank" rel="noopener noreferrer">ESP32_S3_Audio_Recorder</a></li>
+        </ul>
+        I am also developing a new version of the Noisen product 
+        (<a href="https://www.researchgate.net/publication/376406175_Noisen_Un_Dispositivo_IoT_para_la_Medicion_Precisa_y_Visualizacion_de_Contaminacion_Acustica_en_Ambientes_Medicos_Criticos" target="_blank" rel="noopener noreferrer">Paper presentation</a>) 
+        in the laboratories of the National Defense University (UNDEF).
+        In 2025, I began the Higher Technical Degree in Embedded Systems and Internet of Things (ITFS 14).`;
+
+                    // Traducción de "View CV"
+                    document.getElementById('ver-cv-summary').textContent = 'View CV';
+                }
+            }
+
+        </script>
 </body>
 
 </html>

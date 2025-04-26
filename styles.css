@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #222;
+    background-color: #333; /* antes era #222 */
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -88,7 +88,6 @@ a:hover {
     display: block;             /* elimina posibles espacios blancos */
 }
 
-
 .carousel {
     position: relative;
     width: 100%;
@@ -105,13 +104,11 @@ a:hover {
 }
 
 .carousel-images img {
-    width: 640px;
-    /* Puedes cambiar este valor si lo necesitas */
+    width: 100%;
     height: auto;
     object-fit: contain;
     object-position: center;
 }
-
 
 
 .carousel-btn {
@@ -153,7 +150,7 @@ footer {
     margin-top: 40px;
     text-align: center;
     padding: 20px;
-    background-color: #222;
+    background-color: #333; /* antes era #222 */
     color: white;
 }
 
@@ -162,13 +159,7 @@ footer {
     padding-left: 1.5em;
     margin: 0;
   }
-  .doc-list li {
+
+.doc-list li {
     margin-bottom: 1em;
   }
-  
-  
-  
-  
-  
-  
-  
