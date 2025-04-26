@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miguel Ángel López Di Benedetto</title>
+    <meta name="description" content="Portfolio profesional de Miguel Ángel López Di Benedetto" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Miguel Ángel López Di Benedetto</h1>
+            <p class="subtitle">Electrónica digital, analógica e IoT.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="button">Ver Proyectos</a>
+                <a href="#contact" class="button button-outline">Contactar</a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <a href="#about">Sobre mí</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#contact">Contacto</a>
+        </div>
+    </nav>
+    <main class="container">
+        <section id="about">
+            <h2><i class="fas fa-user"></i> Sobre Mí</h2>
+            <p>Estudiante avanzado de Ingeniería de Sonido (UNTREF) con un gran interés en electrónica digital y
+                analógica. Hace un año me sumé al Grupo de Acústica Submarina (GIAS) en el cual desarrollo
+                el firmware de un hidrófono.
+                Aquí a continuación pueden encontrar una versión preliminar del firmware:
+            </p>
+            <ul>
+                <li><a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder"
+                        target="_blank">ESP32_Audio_Recorder</a></li>
+                <li><a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder"
+                        target="_blank">ESP32_S3_Audio_Recorder</a></li>
+            </ul>
+            <p>
+                En los laboratorios de la Universidad de la Defensa Nacional (UNDEF) me encuentro desarrollando una
+                nueva
+                versión del producto
+                <a href="https://www.noisen.com.ar/" target="_blank">Noisen</a>
+                (<a href="https://www.researchgate.net/publication/376406175_Noisen_Un_Dispositivo_IoT_para_la_Medicion_Precisa_y_Visualizacion_de_Contaminacion_Acustica_en_Ambientes_Medicos_Criticos" target="_blank">Paper</a>).
+            </p>
+            <p>
+                A fin de complementar mi formación, en 2025 inicié la Técnicatura Superior en Sistemas Embebidos
+                e Internet de las Cosas (ITFS 14).
+            </p>
+        </section>
+        <section id="projects">
+            <h2><i class="fas fa-code-branch"></i> Proyectos:</h2>
+            <div class="project-card">
+                <h3>ESP32 Audio Recorder</h3>
+                <p>Sistema de grabación de audio (16 bits @ 44.1 kHz) con almacenamiento en tarjeta SD, control vía WiFi
+                    con calendario programable.</p>
+                <a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank">Ver en GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>ESP32 S3 Audio Recorder</h3>
+                <p>Versión actualizada tanto en hardware como en drivers, con optimización del consumo energético.</p>
+                <a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank">Ver en GitHub</a>
+            </div>
+        </section>
+        <div class="project-card">
+            <h3>Desarrollo de un milivoltímetro:</h3>
+            <p>Diseño adaptado del libro 'The Art of Electronics'.</p>
+            <div class="carousel">
+                <button class="carousel-btn prev">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="pics/input.jpg" alt="Etapa de entrada">
+                    <img src="pics/output.jpg" alt="Etapa de salida">
+                    <img src="pics/PCB_2D.jpg" alt="Diseño en 2D">
+                    <img src="pics/PCB_3D.jpg" alt="Diseño en 3D">
+                    <img src="pics/comparison.jpg" alt="Comparación con Agilent 34420A">
+                </div>
+                <button class="carousel-btn next">&#10095;</button>
+            </div>
+        </div>
+        <section>
+            <div class="project-card">
+                <h3>Documentación de algunos desarrollos:</h3>
+                <div class="pdf-container">
+                    <iframe src="pdf/Informe 9 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%"
+                        height="600px"></iframe>
+                </div>
+                <div class="pdf-container">
+                    <iframe src="pdf/TP 10 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%" height="600px"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2><i class="fas fa-cogs"></i> Habilidades Técnicas</h2>
+            <ul class="skills">
+                <li>Arduino, C++, Python, R</li>
+                <li>Git, VSCode, PlatformIO</li>
+                <li>Altium/KiCad, Diseño de PCB</li>
+            </ul>
+        </section>
+    </main>
+    <footer id="contact">
+        <div class="container">
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <p>Email: <a href="mailto:lopezmiguelangel@live.com">lopezmiguelangel@live.com</a></p>
+            <p>GitHub: <a href="https://github.com/AlgunosSomosAsi" target="_blank">github.com/AlgunosSomosAsi</a></p>
+        </div>
+    </footer>
+    <!-- Otras cosas -->
+    <script>
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const images = carousel.querySelector('.carousel-images');
+            const total = images.children.length;
+            let index = 0;
+
+            images.style.width = `${total * 100}%`;
+            images.querySelectorAll('img').forEach(img => {
+                img.style.width = `${100 / total}%`;
+            });
+
+            const updateTransform = () => {
+                images.style.transform = `translateX(-${(100 / total) * index}%)`;
+            };
+
+            carousel.querySelector('.next').addEventListener('click', () => {
+                index = (index + 1) % total;
+                updateTransform();
+            });
+
+            carousel.querySelector('.prev').addEventListener('click', () => {
+                index = (index - 1 + total) % total;
+                updateTransform();
+            });
+
+            updateTransform();
+        });
+    </script>
+</body>
+
+</body>
+
+</html>
