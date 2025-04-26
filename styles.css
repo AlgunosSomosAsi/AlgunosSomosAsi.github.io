@@ -135,15 +135,12 @@ footer a {
 }
 
 .carousel-images img {
-    width: 100%;
-    /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    width: 640px; /* Puedes cambiar este valor si lo necesitas */
     height: auto;
-    /* Mantiene la proporción de la imagen */
     object-fit: contain;
-    /* Hace que la imagen se ajuste dentro del contenedor sin perder la proporción */
     object-position: center;
-    /* Centra la imagen en el contenedor */
 }
+
 
 
 .carousel-btn {
@@ -166,21 +163,13 @@ footer a {
 
 .carousel-btn.next {
     right: 8px;
-<<<<<<< HEAD
 }
 
 a i {
     font-size: 24px;
-    /* Cambia el tamaño del ícono */
     color: #007bff;
-    /* Cambia el color del ícono */
 }
 
 a i:hover {
     color: #0056b3;
-    /* Cambia el color al pasar el mouse */
 }
-=======
-  }
-  
->>>>>>> e3ddffaf05ad87f574aee947797aef8aa6512765

@@ -2,128 +2,164 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miguel Ángel López Di Benedetto</title>
-    <meta name="description" content="Portfolio profesional de Miguel Ángel López Di Benedetto" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="description"
+        content="Portfolio profesional de Miguel Ángel López Di Benedetto. Electrónica digital, analógica e IoT.">
+
+    <!-- Fuentes y Estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+
 </head>
+
 <body>
     <header class="header-fondo">
         <div class="container">
             <h1>Miguel Ángel López Di Benedetto</h1>
             <p class="subtitle">Electrónica digital, analógica e IoT.</p>
-            <p>Escribime: <a href="mailto:lopezmiguelangel@live.com"><i class="fas fa-envelope"></i></a></p>
+            <p class="subtitle">¿Tenés una idea? Escribime y te ayudo a concretarla:
+                <a href="mailto:lopezmiguelangel@live.com" aria-label="Enviar correo a Miguel Ángel">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </p>
         </div>
     </header>
+
+    <!-- Video Embed -->
+    <div class="video-container" style="margin: 20px 0;">
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/TUQkNtvqEjA" 
+                title="Video de Presentación" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <main class="container">
         <section id="about">
             <h2><i class="fas fa-user"></i> Sobre Mí</h2>
-            <p>Estudiante avanzado de Ingeniería de Sonido (UNTREF) con un gran interés en electrónica digital y
-                analógica. Hace un año me sumé al Grupo de Acústica Submarina (GIAS) en el cual desarrollo
-                el firmware de un hidrófono.
-                Aquí a continuación pueden encontrar una versión preliminar del firmware:
+            <p>Estudiante avanzado de Ingeniería de Sonido (UNTREF) con gran interés en electrónica digital y analógica.
+                Actualmente, formo parte del Grupo de Acústica Submarina (GIAS), donde desarrollo el firmware de un
+                hidrófono.
             </p>
             <ul>
-                <li><a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder"
-                        target="_blank">ESP32_Audio_Recorder</a></li>
-                <li><a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder"
-                        target="_blank">ESP32_S3_Audio_Recorder</a></li>
+                <li><a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank"
+                        rel="noopener noreferrer">ESP32_Audio_Recorder</a></li>
+                <li><a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank"
+                        rel="noopener noreferrer">ESP32_S3_Audio_Recorder</a></li>
             </ul>
             <p>
-                En los laboratorios de la Universidad de la Defensa Nacional (UNDEF) me encuentro desarrollando una
-                nueva
-                versión del producto
-                <a href="https://www.noisen.com.ar/" target="_blank">Noisen</a>
-                (<a href="https://www.researchgate.net/publication/376406175_Noisen_Un_Dispositivo_IoT_para_la_Medicion_Precisa_y_Visualizacion_de_Contaminacion_Acustica_en_Ambientes_Medicos_Criticos" target="_blank">Paper</a>).
+                Además, desarrollo una nueva versión del producto
+                <a href="https://www.noisen.com.ar/" target="_blank" rel="noopener noreferrer">Noisen</a>
+                (<a href="https://www.researchgate.net/publication/376406175_Noisen_Un_Dispositivo_IoT_para_la_Medicion_Precisa_y_Visualizacion_de_Contaminacion_Acustica_en_Ambientes_Medicos_Criticos"
+                    target="_blank" rel="noopener noreferrer">Paper</a>)
+                en los laboratorios de la Universidad de la Defensa Nacional (UNDEF).
             </p>
             <p>
-                A fin de complementar mi formación, en 2025 inicié la Técnicatura Superior en Sistemas Embebidos
-                e Internet de las Cosas (ITFS 14).
+                En 2025, inicié la Tecnicatura Superior en Sistemas Embebidos e Internet de las Cosas (ITFS 14).
             </p>
         </section>
+
         <section id="projects">
-            <h2><i class="fas fa-code-branch"></i> Proyectos:</h2>
+            <h2><i class="fas fa-code-branch"></i> Proyectos</h2>
+
             <div class="project-card">
                 <h3>ESP32 Audio Recorder</h3>
-                <p>Sistema de grabación de audio (16 bits @ 44.1 kHz) con almacenamiento en tarjeta SD, control vía WiFi
-                    con calendario programable.</p>
-                <a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank">Ver en GitHub</a>
+                <p>Sistema de grabación de audio (16 bits @ 44.1 kHz) con almacenamiento en tarjeta SD y control vía
+                    WiFi mediante calendario programable.</p>
+                <a href="https://github.com/AlgunosSomosAsi/ESP32_Audio_Recorder" target="_blank"
+                    rel="noopener noreferrer">Ver en GitHub</a>
             </div>
+
             <div class="project-card">
                 <h3>ESP32 S3 Audio Recorder</h3>
-                <p>Versión actualizada tanto en hardware como en drivers, con optimización del consumo energético.</p>
-                <a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank">Ver en GitHub</a>
+                <p>Versión optimizada en hardware y software, con mejoras en eficiencia energética.</p>
+                <a href="https://github.com/AlgunosSomosAsi/ESP32_S3_Audio_Recorder" target="_blank"
+                    rel="noopener noreferrer">Ver en GitHub</a>
             </div>
-        </section>
-        <div class="project-card">
-            <h3>Desarrollo de un milivoltímetro:</h3>
-            <p>Diseño adaptado del libro 'The Art of Electronics'.</p>
-            <div class="carousel">
-                <button class="carousel-btn prev">&#10094;</button>
-                <div class="carousel-images">
-                    <img src="pics/input.jpg" alt="Etapa de entrada">
-                    <img src="pics/output.jpg" alt="Etapa de salida">
-                    <img src="pics/PCB_2D.jpg" alt="Diseño en 2D">
-                    <img src="pics/PCB_3D.jpg" alt="Diseño en 3D">
-                    <img src="pics/comparison.jpg" alt="Comparación con Agilent 34420A">
-                </div>
-                <button class="carousel-btn next">&#10095;</button>
-            </div>
-        </div>
-        <section>
+
             <div class="project-card">
-                <h3>Documentación de algunos desarrollos:</h3>
-                <div class="pdf-container">
-                    <iframe src="pdf/Informe 9 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%"
-                        height="600px"></iframe>
-                </div>
-                <div class="pdf-container">
-                    <iframe src="pdf/TP 10 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%" height="600px"></iframe>
+                <h3>Desarrollo de un Milivoltímetro</h3>
+                <p>Diseño basado en el libro <em>The Art of Electronics</em>.</p>
+                <div class="carousel">
+                    <button class="carousel-btn prev" aria-label="Imagen anterior">&#10094;</button>
+                    <div class="carousel-images">
+                        <img src="pics/input.jpg" alt="Etapa de entrada del milivoltímetro">
+                        <img src="pics/output.jpg" alt="Etapa de salida del milivoltímetro">
+                        <img src="pics/PCB_2D.jpg" alt="Diseño PCB en 2D">
+                        <img src="pics/PCB_3D.jpg" alt="Diseño PCB en 3D">
+                        <img src="pics/comparison.jpg" alt="Comparación con Agilent 34420A">
+                    </div>
+                    <button class="carousel-btn next" aria-label="Imagen siguiente">&#10095;</button>
                 </div>
             </div>
+
+            <div class="project-card">
+                <h3>Documentación Técnica</h3>
+                <div class="pdf-container">
+                    <iframe id="iframe1" src="pdf/Informe 9 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%" height="600"
+                        title="Informe técnico 9"
+                        style="border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    </iframe>
+                </div>
+                <div class="pdf-container">
+                    <iframe id="iframe2" src="pdf/TP 10 Lopez Di Benedetto - 2023 1C - v1.pdf" width="100%" height="600"
+                        title="Trabajo práctico 10"
+                        style="border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    </iframe>
+                </div>
+            </div>
+
+            <section id="skills">
+                <h2><i class="fas fa-cogs"></i> Currículum Vitae</h2>
+                <div class="pdf-container">
+                    <iframe id="iframe3" src="pdf/Lopez_Di_Benedetto_CV_V2.pdf" width="100%" height="600"
+                        title="Currículum de Miguel Ángel López Di Benedetto"
+                        style="border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    </iframe>
+                </div>
+            </section>
         </section>
-        <section id="skills">
-            <h2><i class="fas fa-cogs"></i> Mi CV:</h2>
-            <div class="pdf-container">
-                <iframe src="pdf/Lopez_Di_Benedetto_CV_V2.pdf" width="100%" height="600px"></iframe>
-            </div>
+        
+        <!-- Sección final con información adicional -->
+        <section id="footer">
+            <p>Contacto: <a href="mailto:lopezmiguelangel@live.com">lopezmiguelangel@live.com</a></p>
+            <p>Año de creación: 2023</p>
         </section>
     </main>
-    <!-- Otras cosas -->
     <script>
-        document.querySelectorAll('.carousel').forEach(carousel => {
-            const images = carousel.querySelector('.carousel-images');
-            const total = images.children.length;
-            let index = 0;
-
-            images.style.width = `${total * 100}%`;
-            images.querySelectorAll('img').forEach(img => {
-                img.style.width = `${100 / total}%`;
-            });
-
-            const updateTransform = () => {
-                images.style.transform = `translateX(-${(100 / total) * index}%)`;
-            };
-
-            carousel.querySelector('.next').addEventListener('click', () => {
-                index = (index + 1) % total;
-                updateTransform();
-            });
-
-            carousel.querySelector('.prev').addEventListener('click', () => {
-                index = (index - 1 + total) % total;
-                updateTransform();
-            });
-
-            updateTransform();
+        const prevBtn = document.querySelector('.carousel-btn.prev');
+        const nextBtn = document.querySelector('.carousel-btn.next');
+        const carouselImages = document.querySelector('.carousel-images');
+        let currentIndex = 0;
+        
+        const images = document.querySelectorAll('.carousel-images img');
+        const totalImages = images.length;
+    
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = totalImages - 1;
+            }
+            updateCarousel();
         });
+    
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalImages - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            updateCarousel();
+        });
+    
+        function updateCarousel() {
+            const offset = -currentIndex * 100; // Mueve las imágenes al lugar adecuado
+            carouselImages.style.transform = `translateX(${offset}%)`;
+        }
     </script>
-</body>
-
+    
 </body>
 
 </html>
