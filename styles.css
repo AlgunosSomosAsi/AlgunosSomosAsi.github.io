@@ -25,15 +25,14 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 400px; /* ajustá según lo que quieras */
-    color: white;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .header-fondo .container {
-    background-color: rgba(0, 0, 0, 0.5); /* opcional: para mejorar contraste */
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
@@ -43,79 +42,50 @@ header {
     margin: 10px 0 20px;
 }
 
-.cta-buttons .button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    margin: 0 5px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.button-outline {
-    background-color: transparent;
-    border: 2px solid white;
-}
-
-nav {
-    background-color: #007bff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-main {
-    background-color: white;
-    padding: 30px 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-h2 i {
-    margin-right: 8px;
-}
-
-.project-card {
-    background-color: #eef;
-    padding: 15px;
-    margin: 15px 0;
-    border-left: 5px solid #007bff;
-    border-radius: 5px;
-}
-
-.project-card h3 {
-    margin-top: 0;
-}
-
-.skills {
-    list-style: none;
-    padding: 0;
-}
-
-.skills li {
-    background: #ddd;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 4px;
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+.section {
     margin-top: 40px;
 }
 
-footer a {
-    color: #00aced;
+.section h2 {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #007bff;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.video-container {
+    margin: 20px auto;          /* centrado horizontal */
+    max-width: 800px;           /* ancho máximo */
+    border-radius: 12px;        /* esquinas redondeadas */
+    overflow: hidden;           /* para que el iframe respete el border-radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* sombra suave */
+}
+
+.video-container iframe {
+    border: none;               /* quita el borde por defecto */
+    display: block;             /* elimina posibles espacios blancos */
 }
 
 
@@ -135,7 +105,8 @@ footer a {
 }
 
 .carousel-images img {
-    width: 640px; /* Puedes cambiar este valor si lo necesitas */
+    width: 640px;
+    /* Puedes cambiar este valor si lo necesitas */
     height: auto;
     object-fit: contain;
     object-position: center;
@@ -165,11 +136,39 @@ footer a {
     right: 8px;
 }
 
-a i {
-    font-size: 24px;
-    color: #007bff;
+.pdf-container {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-a i:hover {
-    color: #0056b3;
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
 }
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.doc-list {
+    list-style: none;
+    padding-left: 1.5em;
+    margin: 0;
+  }
+  .doc-list li {
+    margin-bottom: 1em;
+  }
+  
+  
+  
+  
+  
+  
+  
